@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <title>Medir los resultados</title>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script>
+    function realizaProceso(fuente){
+        var parametros = {
+            "f" : fuente
+        };
+        $.ajax({
+            data:  parametros,
+            url:   'generar.php',
+            type:  'post',
+            beforeSend: function () {
+                $("#resultado").html("Procesando, espere por favor...");
+            },
+            success:  function (response) {
+                $("#resultado").html("Resultado sin error");
+                var r = jQuery.parseJSON(response);
+                $("#rhtml").text(r.html);
+            },
+            error: function(response) {
+                $("#resultado").html(response);
+            }
+        });
+    }
+    </script>       
+</head>
+
+<body>
+    <form action="generar.php" method="post">
+        Contenido:<br>
+        <textarea id="fuente" name="fuente" rows="20" style="width: 100%">
+{
+    "campos": {
+        "codigo": {
+            "tipo": "text",
+            "min_largo": 1,
+            "max_largo": 10,
+            "editar_sololectura": true,
+            "html_nombre": "C&oacute;digo",
+            "html_null": "Escriba un c&oacute;digo"
+        },
+        "nombre": {
+            "tipo": "text",
+            "min_largo": 1,
+            "max_largo": 10,
+            "html_nombre": "Nombre"
+        }
+    }
+}
+        </textarea><br>
+        <input type="button" href="javascript:;"
+            onclick="realizaProceso($('#fuente').val());return false;" value="Calcula"
+        >
+        </form>
+        Error de resultado: <span id="resultado">Sin error.</span><br>
+        HTML:<br>
+        <textarea id="rhtml" name="rhtml" rows="20" style="width: 100%">
+        </textarea><br>
+</body>
+</html>
