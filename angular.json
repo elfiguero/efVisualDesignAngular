@@ -21,6 +21,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/sass/material-dashboard.scss",
@@ -29,8 +30,7 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/bootstrap-material-design/dist/js/ripples.min.js",
-              "node_modules/bootstrap-material-design/dist/js/material.min.js",
+              "node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
               "node_modules/arrive/src/arrive.js",
               "node_modules/moment/moment.js",
               "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
@@ -85,8 +85,7 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/bootstrap-material-design/dist/js/ripples.min.js",
-              "node_modules/bootstrap-material-design/dist/js/material.min.js",
+              "node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
               "node_modules/arrive/src/arrive.js",
               "node_modules/moment/moment.js",
               "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
@@ -94,6 +93,7 @@
               "node_modules/chartist/dist/chartist.js"
             ],
             "styles": [
+              "node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/sass/material-dashboard.scss",
